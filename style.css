@@ -59,6 +59,17 @@ p.subtitle {
 p.text {
   /* gray-700 */
   color: rgb(55 65 81);
+  font-size: small;
+}
+
+p.footer {
+  margin-top: 10px;
+  font-size: xx-small;
+}
+
+li {
+  font-size: xx-small;
+  margin-left: 10px;
 }
 
 .line {
@@ -68,6 +79,10 @@ p.text {
 .hidden {
   display: none;
 }
+
+/* input[type="checkbox"] #togglePositiveData {
+  accent-color: #c70039;
+} */
 
 /* checkbox cdd*/
 .container {

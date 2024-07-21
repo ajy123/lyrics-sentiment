@@ -37,9 +37,35 @@
         </h1>
         <p class="text">
           <!-- <p class="mt-6 text-xl leading-8 text-gray-700"></p> -->
-          Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At
-          arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque id at vitae
-          feugiat egestas.
+          In their 2018 research,
+          <a
+            href="https://www.researchgate.net/publication/330349350_Quantitative_Sentiment_Analysis_of_Lyrics_in_Popular_Music"
+            >"Quantitative Sentiment Analysis of Lyrics in Popular Music"</a
+          >,researchers described how the lyrics of popular music have trended
+          towards a more negative tone, characterized by emotions such as anger,
+          disgust, fear, sadness, and conscientiousness. <br />This analysis
+          covered Billboard 100 songs from 1951 to 2016. Does this trend
+          continue in recent years? <br />By examining Spotify's weekly Top 200
+          playlists from 2017 to 2021, we can explore this question further. The
+          chart on the right illustrates the distribution of songs across
+          different emotional categories (positive, slightly positive, slightly
+          negative, negative) for each week.  <br />Most pop songs' lyrics have
+          fluctuated between slightly positive and slightly negative emotions
+          over this period. However, a notable trend emerged in early 2020:
+          listeners seemed to prefer songs with more extreme emotional content,
+          likely reflecting the uncertainty and anxiety of the COVID-19
+          pandemic.
+        </p>
+        <p class="footer">
+          <u>Methodology and Notes </u><br />Emotional categories are determined
+          by spaCy's sentiment analysis, which assigns a sentiment score between
+          -1 and 1 to each song. These scores are categorized as follows:
+          <ul>
+          <li>Positive: scores between 0.5 and 1 </li>
+          <li>Slightly Positive: scores between 0 and 0.5 </li>
+          <li>Slightly Negative: scores between -0.5 and 0 </li>
+          <li>Negative: scores between -1 and -0.5</li>
+          </ul>
         </p>
       </div>
 
@@ -64,3 +90,7 @@
     <script src="main.js"></script>
   </body>
 </html>
+
+<!-- fix writing and toggle -->
+<!-- # create legend for the chart
+# question about showing tooltip -->
