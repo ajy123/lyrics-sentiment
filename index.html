@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project2</title>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- <link href="scrolly-styles.css" rel="stylesheet" /> -->
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/3.2.0/scrollama.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.3.0/d3.min.js"></script>
+  </head>
+  <body>
+    <div class="content">
+      <div class="description">
+        <p class="subtitle">
+          <!-- <p class="text-base font-semibold leading-7 text-indigo-600"> -->
+          Lyrics sentiment analysis
+        </p>
+        <h1
+          class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+        >
+          The Emotions of Pop Songs
+        </h1>
+        <p class="text">
+          <!-- <p class="mt-6 text-xl leading-8 text-gray-700"></p> -->
+          Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At
+          arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque id at vitae
+          feugiat egestas.
+        </p>
+      </div>
+
+      <div class="chart">
+        <input type="checkbox" id="toggleMissingData" checked /> missing data
+
+        <!-- <label class="container"
+          >missing data
+          <input type="checkbox" id="toggleMissingData" checked="checked" />
+          <span class="checkmark"></span>
+        </label> -->
+
+        <input type="checkbox" id="togglePositiveData" checked />
+        positive
+        <input type="checkbox" id="toggleSlightlyPositiveData" checked />
+        slightly positive
+        <input type="checkbox" id="toggleSlightlyNegativeData" checked />
+        slightly negative
+        <input type="checkbox" id="toggleNegativeData" checked /> negative
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
