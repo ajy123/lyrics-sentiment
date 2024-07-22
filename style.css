@@ -80,74 +80,60 @@ li {
   display: none;
 }
 
-/* input[type="checkbox"] #togglePositiveData {
-  accent-color: #c70039;
-} */
+input[type="checkbox"] {
+  display: none; /* Hide the default checkbox */
+}
 
-/* checkbox cdd*/
-.container {
-  display: block;
+label {
+  padding-left: 24px; /* Space for the custom checkbox */
   position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
   cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
-/* Hide the browser's default checkbox */
-.container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-/* Create a custom checkbox */
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-}
-
-/* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
-  background-color: #ccc;
-}
-
-/* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
-  background-color: #2196f3;
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
+label:before {
   content: "";
   position: absolute;
-  display: none;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 0.1px solid #ccc;
+  background-color: #fff;
 }
 
-/* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
-  display: block;
+input[type="checkbox"]:checked + label:before {
+  content: "\2713";
+  color: white;
+  /* justify-content: center; */
+  text-align: center;
+  line-height: 18px;
 }
 
-/* Style the checkmark/indicator */
-.container .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+input[type="checkbox"]:hover + label:before {
+  opacity: 0.7;
+}
+
+input[type="checkbox"]:disabled + label:before {
+  opacity: 0.5;
+}
+
+/* Specific colors for each category */
+input#togglePositiveData:checked + label:before {
+  background-color: #023047;
+}
+
+input#toggleSlightlyPositiveData:checked + label:before {
+  background-color: #219ebc;
+}
+
+input#toggleSlightlyNegativeData:checked + label:before {
+  background-color: #ffb703;
+}
+
+input#toggleNegativeData:checked + label:before {
+  background-color: #fb8500;
+}
+
+input#toggleMissingData:checked + label:before {
+  background-color: gray;
 }

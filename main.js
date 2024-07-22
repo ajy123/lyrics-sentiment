@@ -320,6 +320,42 @@ getData().then(() => {
     const isChecked = this.checked;
     svg.selectAll(".negative").classed("hidden", !isChecked);
   });
+
+  // document.addEventListener("DOMContentLoaded", () => {
+  //   const categories = [
+  //     { id: "togglePositiveData", class: "positive", color: "green" },
+  //     {
+  //       id: "toggleSlightlyPositiveData",
+  //       class: "slightlypositive",
+  //       color: "yellow",
+  //     },
+  //     {
+  //       id: "toggleSlightlyNegativeData",
+  //       class: "slightlynegative",
+  //       color: "orange",
+  //     },
+  //     { id: "toggleNegativeData", class: "negative", color: "red" },
+  //     { id: "toggleMissingData", class: "missingdata", color: "gray" },
+  //   ];
+
+  //   categories.forEach((category) => {
+  //     const checkbox = document.getElementById(category.id);
+  //     const label = checkbox.nextElementSibling;
+  //     console.log(checkbox);
+  //     // Initial label color
+  //     if (checkbox.checked) {
+  //       label.style.color = category.color;
+  //     }
+
+  //     // Event listener for toggling visibility and updating label color
+  //     checkbox.addEventListener("change", function () {
+  //       const isChecked = this.checked;
+  //       console.log(category.class);
+  //       svg.selectAll(`.${category.class}`).classed("hidden", !isChecked);
+  //       label.style.color = isChecked ? category.color : "";
+  //     });
+  //   });
+  // });
 });
 
 // positive: 8ecae6
