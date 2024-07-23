@@ -24,38 +24,62 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.3.0/d3.min.js"></script>
   </head>
   <body>
-    <div class="content">
-      <div class="description">
-        <p class="subtitle">
-          <!-- <p class="text-base font-semibold leading-7 text-indigo-600"> -->
-          Lyrics sentiment analysis
-        </p>
-        <h1
+      <main>
+      <section id="intro">
+        <h1 class="intro__hed">
+        <!-- <h1
           class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
-        >
+        > -->
           The Emotions of Pop Songs
         </h1>
-        <p class="text">
-          <!-- <p class="mt-6 text-xl leading-8 text-gray-700"></p> -->
-          In their 2018 research,
+        <p class="intro__dek text">In their 2018 research,
           <a
             href="https://www.researchgate.net/publication/330349350_Quantitative_Sentiment_Analysis_of_Lyrics_in_Popular_Music"
             >"Quantitative Sentiment Analysis of Lyrics in Popular Music"</a
-          >,researchers described how the lyrics of popular music have trended
+          >,  tresearchers described how the lyrics of popular music have trended
           towards a more negative tone, characterized by emotions such as anger,
-          disgust, fear, sadness, and conscientiousness. <br />This analysis
+          disgust, fear, sadness, and conscientiousness. This analysis
           covered Billboard 100 songs from 1951 to 2016. Does this trend
-          continue in recent years? <br />By examining Spotify's weekly Top 200
-          playlists from 2017 to 2021, we can explore this question further. The
+          continue in recent years? </p>
+      </section>
+
+      <section id="scrolly">
+        <article>
+          <div class="step" data-step="1">
+            <p class="step">By examining Spotify's weekly Top 200 playlists from 2017 to 2021, we can explore this question further. The
           chart on the right illustrates the distribution of songs across
           different emotional categories (positive, slightly positive, slightly
-          negative, negative) for each week.  <br />Most pop songs' lyrics have
+          negative, negative) for each week. Most pop songs' lyrics have
           fluctuated between slightly positive and slightly negative emotions
-          over this period. However, a notable trend emerged in early 2020:
+          over this period.</p>
+          </div>
+          <div class="step step2" data-step="2">
+          <div><p class="step">However, a notable trend emerged in early 2020:
           listeners seemed to prefer songs with more extreme emotional content,
           likely reflecting the uncertainty and anxiety of the COVID-19
-          pandemic.
-        </p>
+          pandemic.</p></div>
+          </div>
+          <div class="step step3" data-step="3">
+            <div style="height: 20%;"><p class="step">Here are some of the positive songs Spotify users streamed during COVID:
+          </div>
+              <div class="highlighted-data"></div>
+            </div>
+          
+          <!-- <div class="step" data-step="4">
+            <p class="step">
+                These songs' are revolved around [specific topic] by using [these words]
+              </p>
+          </div> -->
+        </article>
+
+        <figure>
+          <!-- <p>000000</p> -->
+          <div class="chart"></div>
+          <!--first init-->
+        </figure>
+      </section>
+
+      <section id="outro">
         <p class="footer">
           <u>Methodology and Notes </u><br />Emotional categories are determined
           by spaCy's sentiment analysis, which assigns a sentiment score between
@@ -67,33 +91,12 @@
           <li>Negative: scores between -1 and -0.5</li>
           </ul>
         </p>
-      </div>
-
-      <div class="chart">
-        <!-- <input type="checkbox" id="toggleMissingData" checked /> missing data
-        <input type="checkbox" id="togglePositiveData" checked />
-        positive
-        <input type="checkbox" id="toggleSlightlyPositiveData" checked />
-        slightly positive
-        <input type="checkbox" id="toggleSlightlyNegativeData" checked />
-        slightly negative
-        <input type="checkbox" id="toggleNegativeData" checked /> negative -->
-     <input type="checkbox" id="togglePositiveData" checked />
-    <label for="togglePositiveData">positive</label>
-    <input type="checkbox" id="toggleSlightlyPositiveData" checked />
-    <label for="toggleSlightlyPositiveData">slightly positive</label>
-    <input type="checkbox" id="toggleSlightlyNegativeData" checked />
-    <label for="toggleSlightlyNegativeData">slightly negative</label>
-    <input type="checkbox" id="toggleNegativeData" checked />
-    <label for="toggleNegativeData">negative</label>
-    <input type="checkbox" id="toggleMissingData" checked />
-    <label for="toggleMissingData">missing data</label>
-      </div>
-    </div>
+      </section>
+      <!--outside of the scroller-->
+       
+    </main>
+    <script src="scroll.js"></script>
     <script src="main.js"></script>
+    
   </body>
 </html>
-
-<!-- fix writing and toggle -->
-<!-- # create legend for the chart
-# question about showing tooltip -->
