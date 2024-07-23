@@ -18,10 +18,11 @@
     />
 
     <!-- <link href="scrolly-styles.css" rel="stylesheet" /> -->
-    <link href="style.css" rel="stylesheet" />
+    <link href="./style.css" rel="stylesheet" />
     <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/3.2.0/scrollama.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.3.0/d3.min.js"></script>
+    <script src="./main.js" type="module"></script>
   </head>
   <body>
       <main>
@@ -49,27 +50,29 @@
             <p class="step">By examining Spotify's weekly Top 200 playlists from 2017 to 2021, we can explore this question further. The
           chart on the right illustrates the distribution of songs across
           different emotional categories (positive, slightly positive, slightly
-          negative, negative) for each week. Most pop songs' lyrics have
-          fluctuated between slightly positive and slightly negative emotions
-          over this period.</p>
+          negative, negative) for each week. </br> Each dot <svg height="10" width="10">
+  <circle r="5" cx="5" cy="5" fill="steelblue" /></svg> is a song in Top200 weekly playlist.</p>
           </div>
           <div class="step step2" data-step="2">
+          <div><p class="step">Most pop songs' lyrics have
+          fluctuated between <svg height="10" width="10">
+  <circle r="5" cx="5" cy="5" fill="#fb8500" /></svg> slightly positive and <svg height="10" width="10">
+  <circle r="5" cx="5" cy="5" fill="#fb8500" /></svg> slightly negative emotions
+          over this period.</p></div>
+          </div>
+                    <div class="step step3" data-step="3">
           <div><p class="step">However, a notable trend emerged in early 2020:
           listeners seemed to prefer songs with more extreme emotional content,
           likely reflecting the uncertainty and anxiety of the COVID-19
           pandemic.</p></div>
           </div>
-          <div class="step step3" data-step="3">
-            <div style="height: 20%;"><p class="step">Here are some of the positive songs Spotify users streamed during COVID:
+          <div class="step step4" data-step="4">
+            <div style="height: 20%;"><p class="step">Here are some of the positive and negative songs Spotify users streamed during COVID:
           </div>
-              <div class="highlighted-data"></div>
+              <p class="text">positive songs: <div class="highlighted-positive-data"></div></p>
+              <p class="text">negative songs: <div class="highlighted-negative-data"></div></p>
             </div>
-          
-          <!-- <div class="step" data-step="4">
-            <p class="step">
-                These songs' are revolved around [specific topic] by using [these words]
-              </p>
-          </div> -->
+          </div>
         </article>
 
         <figure>
@@ -93,10 +96,7 @@
         </p>
       </section>
       <!--outside of the scroller-->
-       
     </main>
-    <script src="scroll.js"></script>
-    <script src="main.js"></script>
     
   </body>
 </html>
