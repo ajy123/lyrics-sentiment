@@ -54,9 +54,9 @@ function handleStepEnter(response) {
   //   figure.select("p").text(response.index + 1);
   if (response.index === 3) {
     console.log("Highlighting all categories in 2020");
-    const elements = d3.selectAll(".highlight-2020");
-    console.log(elements); // Log selected elements
-    elements.classed("highlight", true);
+    d3.selectAll(".highlight-2020").classed("highlight", true);
+    // console.log(elements); // Log selected elements
+    // elements
   } else {
     d3.selectAll(".highlight-2020").classed("highlight", false);
   }
